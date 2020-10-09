@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "monospace:size=11:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -95,31 +95,25 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
-
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
-
-	[255] = 0,
+	"#161821",  /*  0: black    */
+	"#e27878",  /*  1: red      */
+	"#b4be82",  /*  2: green    */
+	"#e2a478",  /*  3: yellow   */
+	"#84a0c6",  /*  4: blue     */
+	"#a093c7",  /*  5: magenta  */
+	"#89b8c2",  /*  6: cyan     */
+	"#c6c8d1",  /*  7: white    */
+	"#6b7089",  /*  8: brblack  */
+	"#e98989",  /*  9: brred    */
+	"#c0ca8e",  /* 10: brgreen  */
+	"#e9b189",  /* 11: bryellow */
+	"#91acd1",  /* 12: brblue   */
+	"#ada0d3",  /* 13: brmagenta*/
+	"#95c4ce",  /* 14: brcyan   */
+	"#d2d4de",  /* 15: brwhite  */
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
+	/* [255] = 0, */
 };
 
 
@@ -129,8 +123,8 @@ static const char *colorname[] = {
  */
 unsigned int defaultfg = 7;
 unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultcs = 15;
+static unsigned int defaultrcs = 7;
 
 /*
  * Default shape of cursor
